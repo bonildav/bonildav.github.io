@@ -1,18 +1,15 @@
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
-const menuLinks = document.querySelectorAll('.menu__link');
 
-// Toggle the menu when hamburger is clicked
-hamburger.addEventListener('click', function() {
-    const expanded = this.getAttribute('aria-expanded') === 'true';
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
     menu.classList.toggle('active');
-    this.setAttribute('aria-expanded', !expanded);
 });
 
-// Close the menu when any link is clicked
-menuLinks.forEach(link => {
+// Close menu when clicking on a link
+document.querySelectorAll('.menu__link').forEach(link => {
     link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
         menu.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
     });
 });

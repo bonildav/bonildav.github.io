@@ -1,0 +1,247 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    background-color: #cad2c5; /* Light gray-green for a soft backdrop */
+    color: #333;
+    scroll-behavior: smooth;
+    font-weight: 300;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #52796f; /* Dark green for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #84a98c; /* Muted green on hover */
+}
+
+/* Header */
+.header {
+    background-color: transparent;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid #84a98c; /* Subtle border */
+}
+
+.header__logo img {
+    height: 40px;
+    width: auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu__item {
+    margin: 0;
+}
+
+.menu__link {
+    font-weight: 300;
+    color: #52796f; /* Darker green for menu links */
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.menu__link:hover {
+    color: #354f52; /* Darker accent color on hover */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2000;
+}
+
+.hamburger__line {
+    width: 100%;
+    height: 3px;
+    background-color: #52796f; /* Darker green for hamburger */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.hamburger.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line2 {
+    opacity: 0; /* Hide middle line */
+}
+
+.hamburger.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #cad2c5;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .menu__item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .header__logo {
+        margin-left: auto;
+    }
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2rem;
+    color: #354f52; /* Strong contrast for section headers */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    margin-top: 0;
+    background-color: #fff; /* White for clean contrast */
+    text-align: center;
+}
+
+.about__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about__image {
+    max-width: 50%;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.about__image:hover {
+    filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+    .about__content {
+        flex-direction: column;
+    }
+
+    .about__image {
+        max-width: 80%;
+    }
+}
+
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    background-color: #84a98c; /* Muted green for services */
+    color: #fff;
+}
+
+.services__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services__item {
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.services__item:hover {
+    color: #cad2c5; /* Light gray-green on hover */
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #fff; /* White for simplicity */
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__input,
+.contact__textarea {
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #84a98c;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+    border-color: #52796f; /* Darker green on focus */
+}
+
+.contact__button {
+    padding: 12px;
+    background-color: #52796f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact__button:hover {
+    background-color: #354f52; /* Darker accent color on hover */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #52796f;
+    color: white;
+    font-weight: 300;
+}
