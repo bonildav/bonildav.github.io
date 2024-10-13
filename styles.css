@@ -16,7 +16,6 @@ header {
     background-color: #4CAF50;
     color: white;
     padding: 1rem;
-    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
@@ -32,14 +31,10 @@ header .logo img {
     width: auto;
 }
 
-header h1 {
-    margin-left: 1rem;
-    font-size: 1.5rem;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
+    margin-right: 20px;
 }
 
 nav ul li {
@@ -52,19 +47,68 @@ nav ul li a {
     text-decoration: none;
 }
 
-section {
-    padding: 100px 2rem;
-    margin: 100px auto 2rem auto;
-    max-width: 800px;
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
 }
 
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
 }
 
 /* Responsive Styles */
-/* Adjust header and layout for mobile */
+@media (max-width: 768px) {
+    /* Hide regular menu and show hamburger */
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Show the menu when active (open) */
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #4CAF50;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul.active li {
+        margin: 10px 0;
+    }
+
+    nav ul.active li a {
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 80px 1rem;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+}
