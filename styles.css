@@ -3,21 +3,21 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Helvetica', sans-serif; /* Modern, minimal font */
+    font-family: 'Helvetica', sans-serif;
 }
 
 body {
-    background-color: #cad2c5; /* Light gray-green for a clean background */
+    background-color: #cad2c5; /* Light gray-green for a soft backdrop */
     color: #333;
     scroll-behavior: smooth;
-    font-weight: 300; /* Light weight for text */
+    font-weight: 300;
 }
 
 /* Links */
 a {
     text-decoration: none;
-    color: #52796f; /* Darker green for links */
-    transition: color 0.3s ease; /* Smooth transition for hover */
+    color: #52796f; /* Dark green for links */
+    transition: color 0.3s ease;
 }
 
 a:hover {
@@ -27,7 +27,6 @@ a:hover {
 /* Header */
 .header {
     background-color: transparent;
-    color: #52796f; /* Dark green for text */
     padding: 1rem;
     position: fixed;
     width: 100%;
@@ -38,18 +37,12 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    border-bottom: 1px; /* Subtle border for separation */
+    border-bottom: 1px solid #84a98c; /* Subtle border */
 }
 
 .header__logo img {
     height: 40px;
     width: auto;
-}
-
-.header__title {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #52796f;
 }
 
 .menu {
@@ -64,13 +57,13 @@ a:hover {
 
 .menu__link {
     font-weight: 300;
-    color: #52796f;
+    color: #52796f; /* Darker green for menu links */
     text-transform: uppercase;
-    transition: color 0.3s ease; /* Transition effect */
+    transition: color 0.3s ease;
 }
 
 .menu__link:hover {
-    color: #84a98c; /* Muted green on hover */
+    color: #354f52; /* Darker accent color on hover */
 }
 
 /* Hamburger Menu */
@@ -78,22 +71,37 @@ a:hover {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 20px;
+    width: 30px;
+    height: 24px;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
     top: 15px;
     left: 15px;
+    z-index: 2000;
 }
 
 .hamburger__line {
     width: 100%;
-    height: 2px;
-    background-color: #52796f;
+    height: 3px;
+    background-color: #52796f; /* Darker green for hamburger */
+    transition: all 0.3s ease; /* Smooth transitions */
 }
 
+.hamburger.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line2 {
+    opacity: 0; /* Hide middle line */
+}
+
+.hamburger.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -109,7 +117,7 @@ a:hover {
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: #cad2c5; /* Light gray-green for mobile menu */
+        background-color: #cad2c5;
         width: 100%;
         padding: 10px 0;
     }
@@ -124,15 +132,10 @@ a:hover {
     }
 }
 
-/* Main Content Padding */
-main {
-    padding-top: 80px;
-}
-
 /* Section Headings */
 h2 {
     font-size: 2rem;
-    color: #52796f;
+    color: #354f52; /* Strong contrast for section headers */
     text-align: center;
     margin-bottom: 30px;
     font-weight: 400;
@@ -142,7 +145,7 @@ h2 {
 .about {
     padding: 60px 20px;
     margin-top: 0;
-    background-color: #fff; /* White background for contrast */
+    background-color: #fff; /* White for clean contrast */
     text-align: center;
 }
 
@@ -156,11 +159,12 @@ h2 {
 .about__image {
     max-width: 50%;
     border-radius: 8px;
+    filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
 
 .about__image:hover {
-    filter: grayscale(0); /* Removes grayscale on hover */
+    filter: grayscale(0);
 }
 
 @media (max-width: 768px) {
@@ -176,7 +180,7 @@ h2 {
 /* Services Section */
 .services {
     padding: 60px 20px;
-    background-color: #84a98c; /* Muted green for services section */
+    background-color: #84a98c; /* Muted green for services */
     color: #fff;
 }
 
@@ -197,7 +201,7 @@ h2 {
 /* Contact Section */
 .contact {
     padding: 60px 20px;
-    background-color: #fff; /* White background for simplicity */
+    background-color: #fff; /* White for simplicity */
 }
 
 .contact__form {
@@ -209,7 +213,7 @@ h2 {
 .contact__textarea {
     margin-bottom: 10px;
     padding: 12px;
-    border: 1px solid #84a98c; /* Muted green for borders */
+    border: 1px solid #84a98c;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 300;
@@ -222,7 +226,7 @@ h2 {
 
 .contact__button {
     padding: 12px;
-    background-color: #52796f; /* Darker green for buttons */
+    background-color: #52796f;
     color: white;
     border: none;
     cursor: pointer;
@@ -230,14 +234,14 @@ h2 {
 }
 
 .contact__button:hover {
-    background-color: #84a98c; /* Muted green on hover */
+    background-color: #354f52; /* Darker accent color on hover */
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #52796f; /* Darker green for footer */
+    background-color: #52796f;
     color: white;
     font-weight: 300;
 }
