@@ -19,7 +19,7 @@ a {
 
 /* Header */
 .header {
-    background-color: rgba(76, 175, 80, 0.8); /* Apply transparent green background */
+    background-color: transparent; /* Fully transparent background */
     color: white;
     padding: 1rem;
     position: fixed;
@@ -30,7 +30,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(10px); /* Optional: Adds a blur effect to the background */
 }
 
 .header__logo img {
@@ -90,17 +89,16 @@ a {
         display: flex;
     }
 
-    /* Transparent background for mobile menu */
+    /* Fully transparent background for mobile menu */
     .menu.active {
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: rgba(76, 175, 80, 0.8); /* Transparent green */
+        background-color: transparent; /* Fully transparent */
         width: 100%;
         padding: 10px 0;
-        backdrop-filter: blur(10px); /* Optional: Adds a blur effect */
     }
 
     .menu__item {
