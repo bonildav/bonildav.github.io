@@ -67,7 +67,6 @@ a:hover {
 }
 
 /* Hamburger Menu */
-/* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -100,7 +99,7 @@ a:hover {
 }
 
 .hamburger.active .hamburger__line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(7px, -5px);
 }
 
 
