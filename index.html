@@ -3,70 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="#"><img src="your-logo.png" alt="My Logo"></a>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="#"><img src="your-logo.png" alt="My Logo" /></a>
         </div>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul id="menu">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#services">My Services</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+        <h1 class="header__title">Welcome to My Portfolio</h1>
+        <nav class="header__nav">
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="#about" class="menu__link">About Me</a></li>
+                <li class="menu__item"><a href="#services" class="menu__link">My Services</a></li>
+                <li class="menu__item"><a href="#contact" class="menu__link">Contact Me</a></li>
             </ul>
-            <!-- Hamburger menu icon for mobile -->
-            <div class="hamburger" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <!-- Hamburger Menu for Mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>Hello! I'm a senior front-end developer with expertise in building responsive, user-friendly websites. I specialize in modern JavaScript frameworks, performance optimization, and creating pixel-perfect designs.</p>
-            <img src="your-image.jpg" alt="About Me Image">
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <h2 class="about__title">About Me</h2>
+        <div class="about__content">
+            <p class="about__text">Hello! I'm a senior front-end developer with expertise in building responsive, user-friendly websites. I specialize in modern JavaScript frameworks, performance optimization, and creating pixel-perfect designs.</p>
+            <img src="your-image.jpg" alt="About Me Image" class="about__image">
         </div>
     </section>
 
-    <section id="services">
-        <h2>My Services</h2>
-        <ul>
-            <li>Web Development (HTML, CSS, JavaScript, React, Angular)</li>
-            <li>UI/UX Design</li>
-            <li>Performance Optimization</li>
-            <li>Responsive Design</li>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="services__title">My Services</h2>
+        <ul class="services__list">
+            <li class="services__item">Web Development (HTML, CSS, JavaScript, React, Angular)</li>
+            <li class="services__item">UI/UX Design</li>
+            <li class="services__item">Performance Optimization</li>
+            <li class="services__item">Responsive Design</li>
         </ul>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="submit_form.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="contact__title">Contact Me</h2>
+        <form action="submit_form.php" method="POST" class="contact__form">
+            <label for="name" class="contact__label">Name:</label>
+            <input type="text" id="name" name="name" class="contact__input" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email" class="contact__label">Email:</label>
+            <input type="email" id="email" name="email" class="contact__input" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message" class="contact__label">Message:</label>
+            <textarea id="message" name="message" rows="4" class="contact__textarea" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" class="contact__button">Send Message</button>
         </form>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <p>&copy; 2024 Your Name</p>
     </footer>
 
-    <!-- JavaScript for hamburger menu -->
+    <!-- JavaScript -->
     <script src="scripts.js"></script>
 </body>
 </html>
