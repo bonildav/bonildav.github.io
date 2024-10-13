@@ -99,6 +99,30 @@ nav ul li a {
     }
 }
 
+/* About Me Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-content img {
+    max-width: 50%;
+    border-radius: 8px;
+}
+
+/* Stacked layout on mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        max-width: 80%;
+    }
+}
+
 @media (max-width: 480px) {
     section {
         padding: 80px 1rem;
