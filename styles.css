@@ -109,6 +109,11 @@ a {
     .header__title {
         font-size: 1.2rem;
     }
+
+    /* Move the logo to the right on mobile */
+    .header__logo {
+        margin-left: auto; /* Automatically pushes the logo to the right */
+    }
 }
 
 /* About Section */
