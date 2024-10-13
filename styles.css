@@ -99,7 +99,7 @@ a:hover {
 }
 
 .hamburger.active .hamburger__line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -5px);
+    transform: rotate(-45deg) translate(10px, -5px);
 }
 
 
