@@ -99,7 +99,7 @@ a:hover {
 }
 
 .hamburger.active .hamburger__line:nth-child(3) {
-    transform: rotate(-45deg) translate(10px, -10px); 
+    transform: rotate(-45deg) translate(10px, -10px);
 }
 
 
@@ -180,25 +180,79 @@ h2 {
 }
 
 /* Services Section */
-.services {
-    padding: 60px 20px;
-    background-color: #84a98c; /* Muted green for services */
-    color: #fff;
+/* Carousel Base */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #84a98c;
+    padding: 20px;
 }
 
-.services__list {
-    list-style-type: none;
-    padding: 0;
+.carousel__track-container {
+    overflow: hidden;
+    position: relative;
 }
 
-.services__item {
+.carousel__track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel__slide {
+    min-width: 100%; /* Ensure each slide takes up full width */
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.carousel__image {
+    width: 100px; /* Adjust size for images */
+    height: auto;
     margin-bottom: 10px;
+}
+
+.carousel__text {
+    color: #fff;
     font-weight: 300;
 }
 
-.services__item:hover {
-    color: #cad2c5; /* Light gray-green on hover */
+/* Carousel Buttons */
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #52796f;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
 }
+
+.carousel__button--left {
+    left: 10px;
+}
+
+.carousel__button--right {
+    right: 10px;
+}
+
+.carousel__button:hover {
+    background-color: #354f52;
+}
+
+/* Make carousel responsive */
+@media (max-width: 768px) {
+    .carousel__image {
+        width: 80px;
+    }
+
+    .carousel__text {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Contact Section */
 .contact {

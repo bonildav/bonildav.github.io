@@ -37,17 +37,35 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section with Carousel -->
     <section id="services" class="services">
         <h2 class="services__title">My Services</h2>
-        <ul class="services__list">
-            <li class="services__item">Cloud A</li>
-            <li class="services__item">Cloud migrations and modernization</li>
-            <li class="services__item">IaC Implementations</li>
-            <li class="services__item">CI/CD Implementations</li>
-            <li class="services__item">Observability</li>
-        </ul>
+        <div class="carousel">
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide">
+                        <img src="service1.jpg" alt="Cloud Migrations" class="carousel__image">
+                        <p class="carousel__text">Cloud Migrations and Modernization</p>
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="service2.jpg" alt="IaC Implementations" class="carousel__image">
+                        <p class="carousel__text">IaC Implementations</p>
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="service3.jpg" alt="CI/CD" class="carousel__image">
+                        <p class="carousel__text">CI/CD Implementations</p>
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="service4.jpg" alt="Observability" class="carousel__image">
+                        <p class="carousel__text">Observability</p>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel__button carousel__button--left" aria-label="Previous slide">&larr;</button>
+            <button class="carousel__button carousel__button--right" aria-label="Next slide">&rarr;</button>
+        </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
