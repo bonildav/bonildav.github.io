@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="My Portfolio - Showcasing my skills, services, and how to contact me.">
-    <meta property="og:title" content="My Portfolio">
-    <meta property="og:description" content="Check out my services and contact me for collaboration.">
-    <meta property="og:image" content="link_to_preview_image.png">
-    <meta property="og:url" content="your_website_url.com">
-    <meta property="og:type" content="website">
-    <meta name="keywords" content="cloud, architecture, DevOps, IaC, modernization">
-    <meta name="author" content="Your Name">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,9 +11,9 @@
     <!-- Header Section -->
     <header class="header">
         <div class="header__logo">
-            <a href="#"><img src="logo.png" alt="My Logo - Your Name's Portfolio Logo" /></a>
+            <a href="#"><img src="logo.png" alt="My Logo" /></a>
         </div>
-        <nav class="header__nav" aria-label="Main Navigation">
+        <nav class="header__nav">
             <ul class="menu" id="menu">
                 <li class="menu__item"><a href="#about" class="menu__link">About Me</a></li>
                 <li class="menu__item"><a href="#services" class="menu__link">My Services</a></li>
@@ -37,15 +29,49 @@
     </header>
 
     <!-- About Me Section -->
-    <section id="about" class="about" aria-labelledby="about-title">
-        <h2 id="about-title" class="about__title">About Me</h2>
+    <section id="about" class="about">
+        <h2 class="about__title">About Me</h2>
         <div class="about__content">
             <p class="about__text">Hello! I’m a responsible person engaged with the daily job, teamwork-oriented, and highly motivated to learn new technologies.</p>
-            <img src="aboutme.jpg" alt="Image of [Your Name]" class="about__image">
+            <img src="aboutme.jpg" alt="About Me Image" class="about__image">
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services" aria-labelledby="services-title">
-        <h2 id="services-title" class="services__title">My Services</h2>
-        <ul class="services__list"
+    <section id="services" class="services">
+        <h2 class="services__title">My Services</h2>
+        <ul class="services__list">
+            <li class="services__item">Cloud A</li>
+            <li class="services__item">Cloud migrations and modernization</li>
+            <li class="services__item">IaC Implementations</li>
+            <li class="services__item">CI/CD Implementations</li>
+            <li class="services__item">Observability</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="contact__title">Contact Me</h2>
+        <form action="submit_form.php" method="POST" class="contact__form">
+            <label for="name" class="contact__label">Name:</label>
+            <input type="text" id="name" name="name" class="contact__input" required>
+
+            <label for="email" class="contact__label">Email:</label>
+            <input type="email" id="email" name="email" class="contact__input" required>
+
+            <label for="message" class="contact__label">Message:</label>
+            <textarea id="message" name="message" rows="4" class="contact__textarea" required></textarea>
+
+            <button type="submit" class="contact__button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
