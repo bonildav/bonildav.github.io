@@ -38,7 +38,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    border-bottom: 1px solid #84a98c; /* Subtle border for separation */
+    border-bottom: 1px; /* Subtle border for separation */
 }
 
 .header__logo img {
