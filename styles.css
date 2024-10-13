@@ -156,7 +156,6 @@ h2 {
 .about__image {
     max-width: 50%;
     border-radius: 8px;
-    filter: grayscale(100%); /* Grayscale effect for a minimalistic image */
     transition: filter 0.3s ease;
 }
 
