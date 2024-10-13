@@ -3,57 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Webpage</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="My Portfolio - Showcasing my skills, services, and how to contact me.">
+    <meta property="og:title" content="My Portfolio">
+    <meta property="og:description" content="Check out my services and contact me for collaboration.">
+    <meta property="og:image" content="link_to_preview_image.png">
+    <meta property="og:url" content="your_website_url.com">
+    <meta property="og:type" content="website">
+    <meta name="keywords" content="cloud, architecture, DevOps, IaC, modernization">
+    <meta name="author" content="Your Name">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header class="header">
         <div class="header__logo">
-            <img src="logo.png" alt="Logo">
+            <a href="#"><img src="logo.png" alt="My Logo - Your Name's Portfolio Logo" /></a>
         </div>
-        <button class="hamburger" id="hamburger">
-            <span class="hamburger__line"></span>
-            <span class="hamburger__line"></span>
-            <span class="hamburger__line"></span>
-        </button>
-        <nav class="menu" id="menu">
-            <ul class="menu__list">
+        <nav class="header__nav" aria-label="Main Navigation">
+            <ul class="menu" id="menu">
                 <li class="menu__item"><a href="#about" class="menu__link">About Me</a></li>
-                <li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
+                <li class="menu__item"><a href="#services" class="menu__link">My Services</a></li>
                 <li class="menu__item"><a href="#contact" class="menu__link">Contact Me</a></li>
             </ul>
+            <!-- Hamburger Menu for Mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
         </nav>
     </header>
 
-    <main>
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <div class="about__content">
-                <p>I am a front-end developer...</p>
-                <img src="about-image.jpg" alt="About Image" class="about__image">
-            </div>
-        </section>
-        <section id="services" class="services">
-            <h2>My Services</h2>
-            <ul class="services__list">
-                <li class="services__item">Web Development</li>
-                <li class="services__item">Responsive Design</li>
-            </ul>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <form class="contact__form">
-                <input type="text" placeholder="Your Name" class="contact__input">
-                <textarea placeholder="Your Message" class="contact__textarea"></textarea>
-                <button type="submit" class="contact__button">Send Message</button>
-            </form>
-        </section>
-    </main>
+    <!-- About Me Section -->
+    <section id="about" class="about" aria-labelledby="about-title">
+        <h2 id="about-title" class="about__title">About Me</h2>
+        <div class="about__content">
+            <p class="about__text">Hello! I’m a responsible person engaged with the daily job, teamwork-oriented, and highly motivated to learn new technologies.</p>
+            <img src="aboutme.jpg" alt="Image of [Your Name]" class="about__image">
+        </div>
+    </section>
 
-    <footer class="footer">
-        <p>&copy; 2024 My Website</p>
-    </footer>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
+    <!-- Services Section -->
+    <section id="services" class="services" aria-labelledby="services-title">
+        <h2 id="services-title" class="services__title">My Services</h2>
+        <ul class="services__list"
