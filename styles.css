@@ -66,6 +66,9 @@ a {
     background: none;
     border: none;
     cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px; /* Move the hamburger to the left side */
 }
 
 .hamburger__line {
@@ -74,13 +77,14 @@ a {
     background-color: white;
 }
 
+/* Mobile View */
 @media (max-width: 768px) {
     /* Hide regular menu on mobile */
     .menu {
         display: none;
     }
 
-    /* Display hamburger menu */
+    /* Show hamburger menu on mobile */
     .hamburger {
         display: flex;
     }
@@ -91,7 +95,7 @@ a {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 0;
+        left: 0;
         background-color: #4CAF50;
         width: 100%;
         padding: 10px 0;
@@ -181,41 +185,4 @@ a {
     padding: 10px;
     background-color: #333;
     color: white;
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    left: 15px; /* Move the hamburger to the left side */
-}
-
-/* Other styles remain the same */
-
-/* Mobile Menu (when active) */
-@media (max-width: 768px) {
-    /* Show mobile menu when active */
-    .menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0; /* Ensure the menu opens from the left */
-        background-color: #4CAF50;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .menu__item {
-        margin: 10px 0;
-        text-align: center;
-    }
 }
