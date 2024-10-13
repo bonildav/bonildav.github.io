@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Helvetica', sans-serif;
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
 }
 
 body {
@@ -15,12 +15,12 @@ body {
 /* Links */
 a {
     text-decoration: none;
-    color: #52796f; /* Dark green */
+    color: #52796f; /* Dark green for consistency */
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #354f52; /* Accent color */
+    color: #354f52; /* Darker accent color */
 }
 
 /* Header */
@@ -30,6 +30,7 @@ a:hover {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -51,7 +52,6 @@ a:hover {
     background: none;
     border: none;
     cursor: pointer;
-    position: relative;
     z-index: 2000;
 }
 
@@ -59,19 +59,6 @@ a:hover {
     width: 100%;
     height: 3px;
     background-color: #52796f;
-    transition: all 0.3s ease;
-}
-
-.hamburger.active .line1 {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active .line2 {
-    opacity: 0;
-}
-
-.hamburger.active .line3 {
-    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 @media (max-width: 768px) {
@@ -89,13 +76,17 @@ a:hover {
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: rgba(84, 169, 140, 0.95); /* Muted green with transparency */
+        background-color: rgba(84, 169, 140, 0.95); /* Muted green */
         width: 100%;
     }
 
     .menu__item {
         margin: 10px 0;
         text-align: center;
+    }
+
+    .header__logo {
+        margin-left: auto;
     }
 }
 
@@ -105,7 +96,7 @@ main {
 }
 
 h2 {
-    color: #354f52; /* Dark contrast for headers */
+    color: #354f52; /* Darker contrast */
 }
 
 /* About Section */
@@ -137,42 +128,4 @@ h2 {
     }
 }
 
-/* Services Section */
-.services {
-    background-color: #52796f;
-    color: #fff;
-    padding: 60px;
-}
-
-/* Contact Section */
-.contact {
-    background-color: #fff;
-    padding: 60px;
-}
-
-.contact__input, .contact__textarea {
-    border: 1px solid #84a98c;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.contact__button {
-    background-color: #52796f;
-    color: white;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-}
-
-.contact__button:hover {
-    background-color: #354f52; /* Darker accent color */
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #52796f;
-    color: white;
-}
+/*
