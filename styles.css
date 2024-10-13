@@ -19,7 +19,7 @@ a {
 
 /* Header */
 .header {
-    background-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.8); /* Apply transparent green background */
     color: white;
     padding: 1rem;
     position: fixed;
@@ -30,6 +30,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect to the background */
 }
 
 .header__logo img {
@@ -68,7 +69,7 @@ a {
     cursor: pointer;
     position: absolute;
     top: 15px;
-    left: 15px; /* Move the hamburger to the left side */
+    left: 15px;
 }
 
 .hamburger__line {
@@ -89,16 +90,17 @@ a {
         display: flex;
     }
 
-    /* Show mobile menu when active */
+    /* Transparent background for mobile menu */
     .menu.active {
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: #4CAF50;
+        background-color: rgba(76, 175, 80, 0.8); /* Transparent green */
         width: 100%;
         padding: 10px 0;
+        backdrop-filter: blur(10px); /* Optional: Adds a blur effect */
     }
 
     .menu__item {
@@ -112,82 +114,6 @@ a {
 
     /* Move the logo to the right on mobile */
     .header__logo {
-        margin-left: auto; /* Automatically pushes the logo to the right */
+        margin-left: auto;
     }
-}
-
-/* About Section */
-.about {
-    padding: 80px 20px;
-    margin-top: 80px;
-}
-
-.about__content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.about__image {
-    max-width: 50%;
-    border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-    .about__content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about__image {
-        max-width: 80%;
-    }
-}
-
-/* Services Section */
-.services {
-    padding: 80px 20px;
-}
-
-.services__list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.services__item {
-    margin-bottom: 10px;
-}
-
-/* Contact Section */
-.contact {
-    padding: 80px 20px;
-}
-
-.contact__form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact__input,
-.contact__textarea {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact__button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
 }
