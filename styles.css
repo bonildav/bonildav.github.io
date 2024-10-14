@@ -98,24 +98,6 @@ a:hover {
     animation-delay: 0.5s; /* Delay to start animation */
 }
 
-@keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-.animated-text-2 {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid orange; /* Cursor */
-    animation: typewriter 4s steps(40) 1s forwards, blink-caret .75s step-end infinite;
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-}
-
 
 /* Hamburger Menu */
 .hamburger {
@@ -155,12 +137,8 @@ a:hover {
 
 
 @media (max-width: 768px) {
-    .animated-text-2 {
-        display: inline-block;
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: 3px solid orange; /* Cursor */
-        animation: typewriter 4s steps(40) 1s forwards, blink-caret .75s step-end infinite;
+    .animated-text {
+        animation: fadeInUp 0.8s ease-out forwards;
     }
     .menu {
         position: fixed; /* Fixed position to cover the whole screen */
