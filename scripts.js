@@ -6,10 +6,9 @@ const menuLinks = document.querySelectorAll('.menu__link');
 hamburger.addEventListener('click', function() {
     const expanded = this.getAttribute('aria-expanded') === 'true';
     menu.classList.toggle('active');
+    this.classList.toggle('active'); // Toggle cross effect on hamburger
     this.setAttribute('aria-expanded', !expanded);
 });
-
-
 
 // Close the menu and scroll smoothly to the section when any link is clicked
 menuLinks.forEach(link => {
