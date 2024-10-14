@@ -212,7 +212,6 @@ h2 {
     margin-top: 0;
     background-color: #fff; /* White for clean contrast */
     text-align: center;
-    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .about__content {
@@ -220,6 +219,7 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .about__image {
