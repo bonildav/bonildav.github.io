@@ -102,17 +102,13 @@ a:hover {
     transform: rotate(-45deg) translate(10px, -10px);
 }
 
-
-/* Mobile Menu */
 @media (max-width: 768px) {
     .menu {
         display: none;
     }
-
     .hamburger {
         display: flex;
     }
-
     .menu.active {
         display: flex;
         flex-direction: column;
