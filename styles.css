@@ -216,6 +216,14 @@ h2 {
     gap: 20px;
 }
 
+.about__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 3s ease-out forwards;
+}
+
 .about__image {
     max-width: 50%;
     border-radius: 8px;
