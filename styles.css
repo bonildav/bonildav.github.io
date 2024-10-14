@@ -55,15 +55,29 @@ a:hover {
     margin: 0;
 }
 
+/* Enhanced menu link styles with hover effect */
 .menu__link {
     font-weight: 300;
     color: #52796f; /* Darker green for menu links */
     text-transform: uppercase;
     transition: color 0.3s ease;
+    position: relative; /* Positioning context for pseudo-elements */
+    padding: 10px 15px; /* Adjust padding as needed */
 }
 
-.menu__link:hover {
-    color: #354f52; /* Darker accent color on hover */
+.menu__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #84a98c; /* Muted green for the hover line */
+    transition: width 0.3s ease-in-out;
+}
+
+.menu__link:hover::after {
+    width: 100%; /* Full width on hover */
 }
 
 /* Hamburger Menu */
