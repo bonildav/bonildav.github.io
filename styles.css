@@ -81,6 +81,23 @@ a:hover {
     width: 100%; /* Full width on hover */
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-text {
+    opacity: 0; /* Start with text hidden */
+    animation: fadeInUp 1s ease-out forwards; /* Animation name, duration, timing function, fill mode */
+    animation-delay: 0.5s; /* Delay to start animation */
+}
+
 
 /* Hamburger Menu */
 .hamburger {
@@ -120,6 +137,9 @@ a:hover {
 
 
 @media (max-width: 768px) {
+    .animated-text {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
     .menu {
         position: fixed; /* Fixed position to cover the whole screen */
         top: 0;
