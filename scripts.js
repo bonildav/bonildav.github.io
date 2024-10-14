@@ -10,27 +10,6 @@ hamburger.addEventListener('click', function() {
     this.classList.toggle('active'); // Toggle cross effect on hamburger
     this.setAttribute('aria-expanded', !expanded);
 });
-*/
-
-// Toggle the full-screen menu when hamburger is clicked
-hamburger.addEventListener('click', function() {
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    menu.classList.toggle('active');
-    this.setAttribute('aria-expanded', !expanded);
-
-    // Lock scrolling when the menu is open
-    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
-});
-
-// Close the menu when any link is clicked
-menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        menu.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = 'auto'; // Restore scrolling
-    });
-});
-
 
 // Close the menu and scroll smoothly to the section when any link is clicked
 menuLinks.forEach(link => {
@@ -48,7 +27,30 @@ menuLinks.forEach(link => {
         hamburger.setAttribute('aria-expanded', 'false');
     });
 });
+*/
 
+// Toggle the full-screen menu when hamburger is clicked
+hamburger.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    menu.classList.toggle('active');
+    this.setAttribute('aria-expanded', !expanded);
+    
+    // Smooth scroll to the section
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+
+
+    // Lock scrolling when the menu is open
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+});
+
+// Close the menu when any link is clicked
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+});
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
 const dotsNav = document.querySelector('.carousel__nav');
