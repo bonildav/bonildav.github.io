@@ -63,6 +63,7 @@ a:hover {
     transition: color 0.3s ease;
     position: relative; /* Positioning context for pseudo-elements */
     padding: 10px 15px; /* Adjust padding as needed */
+    overflow: hidden; /* Ensures the line animation is contained within the link area */
 }
 
 .menu__link::after {
@@ -74,6 +75,7 @@ a:hover {
     height: 2px;
     background-color: #84a98c; /* Muted green for the hover line */
     transition: width 0.3s ease-in-out;
+    transform-origin: left; /* Ensures the line grows from left to right */
 }
 
 .menu__link:hover::after {
