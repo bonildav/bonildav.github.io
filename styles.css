@@ -237,7 +237,7 @@ h2 {
 }
 
 .carousel__indicator.current-slide {
-    background-color: #52796f;
+    background-color: #52796f; /* Darker green for active dot */
 }
 
 .carousel__indicator:hover {
