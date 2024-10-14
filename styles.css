@@ -124,8 +124,8 @@ a:hover {
         position: fixed; /* Fixed position to cover the whole screen */
         top: 0;
         left: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
+        right: 0; /* Ensures it stretches to the right edge */
+        bottom: 0; /* Ensures it stretches to the bottom edge */
         background-color: #cad2c5; /* Background color */
         display: flex;
         flex-direction: column;
