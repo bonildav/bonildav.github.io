@@ -81,13 +81,6 @@ a:hover {
     width: 100%; /* Full width on hover */
 }
 
-.no-scroll {
-    overflow: hidden; /* Prevents scrolling */
-    position: fixed; /* Keeps the position in place */
-    width: 100%; /* Ensures the width remains constant */
-    top: 0; /* Aligns to the top */
-    left: 0; /* Aligns to the left */
-}
 
 /* Hamburger Menu */
 .hamburger {

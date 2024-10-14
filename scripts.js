@@ -7,11 +7,6 @@ const body = document.body; // Get the body element
 hamburger.addEventListener('click', function() {
     const expanded = this.getAttribute('aria-expanded') === 'true';
     menu.classList.toggle('active');
-     if (menu.classList.contains('active')) {
-         body.classList.add('no-scroll'); // Add no-scroll to body when menu is active
-     } else {
-         body.classList.remove('no-scroll'); // Remove no-scroll when menu is not active
-     }
     this.classList.toggle('active'); // Toggle cross effect on hamburger
     this.setAttribute('aria-expanded', !expanded);
 });
