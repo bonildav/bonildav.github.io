@@ -92,12 +92,6 @@ a:hover {
     }
 }
 
-.animated-text {
-    opacity: 0; /* Start with text hidden */
-    animation: fadeInUp 1s ease-out forwards; /* Animation name, duration, timing function, fill mode */
-    animation-delay: 0.5s; /* Delay to start animation */
-}
-
 
 /* Hamburger Menu */
 .hamburger {
@@ -138,7 +132,8 @@ a:hover {
 
 @media (max-width: 768px) {
     .animated-text {
-        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0; /* Start with text hidden */
+        animation: fadeInUp 5s ease-out forwards; /* Animation name, duration, timing function, fill mode */
     }
     .menu {
         position: fixed; /* Fixed position to cover the whole screen */
@@ -219,7 +214,6 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .about__image {
