@@ -149,7 +149,7 @@ a:hover {
     }
 
     .menu.active .menu__link {
-        font-size: 1.5em; /* Larger font size */
+        font-size: 2em; /* Larger font size */
         color: #f5f5f5; /* Lighter color */
         transition: color 0.3s ease, font-size 0.3s ease;
     }
@@ -169,7 +169,13 @@ a:hover {
     }
 }
 
-
+.no-scroll {
+    overflow: hidden; /* Prevents scrolling */
+    position: fixed; /* Keeps the position in place */
+    width: 100%; /* Ensures the width remains constant */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+}
 
 /* Section Headings */
 h2 {
