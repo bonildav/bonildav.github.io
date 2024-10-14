@@ -128,7 +128,7 @@ a:hover {
         background-color: #cad2c5;
         width: 100%;
         padding: 10px 0;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.6s ease-in-out;
         transform: translateY(-100%); /* Menu hidden by default */
         opacity: 0; /* Start fully transparent */
     }
@@ -147,7 +147,7 @@ a:hover {
     .header__logo {
         margin-left: auto;
     }
-    
+
     /* Display hamburger icon on mobile */
     .hamburger {
         display: flex;
