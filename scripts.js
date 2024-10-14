@@ -33,6 +33,7 @@ const slides = Array.from(track.children);
 const dotsNav = document.querySelector('.carousel__nav');
 const dots = Array.from(dotsNav.children);
 const slideWidth = slides[0].getBoundingClientRect().width;
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 /* Arrange the slides next to each other */
 const setSlidePosition = (slide, index) => {

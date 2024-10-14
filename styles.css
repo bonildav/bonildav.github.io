@@ -263,6 +263,32 @@ h2 {
     }
 }
 
+/* For mobile */
+@media (max-width: 768px) {
+    .carousel__track {
+        display: block;
+    }
+
+    .carousel__slide {
+        min-width: 100%; /* 1 item per slide */
+    }
+}
+
+/* For desktop */
+@media (min-width: 769px) {
+    .carousel__track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel__slide {
+        min-width: calc(33.33% - 20px); /* 3 items per slide with some spacing */
+        margin-right: 20px;
+    }
+}
+
+
+
 
 /* Contact Section */
 .contact {
