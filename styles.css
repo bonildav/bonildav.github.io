@@ -120,23 +120,20 @@ a:hover {
 
 @media (max-width: 768px) {
     .menu {
-        visibility: hidden; /* Instead of display: none */
-        max-height: 0; /* Collapse the menu */
-        overflow: hidden;
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust based on your header's height */
+        top: 60px;
         left: 0;
         background-color: #cad2c5;
         width: 100%;
-        padding: 0 10px; /* Remove vertical padding */
-        transition: all 0.3s ease-in-out; /* Transition for all properties */
-        transform: translateY(-10px); /* Start slightly above to create a slide effect */
+        padding: 10px 0;
+        transition: transform 0.6s ease-in-out;
+        transform: translateY(-100%); /* Menu hidden by default */
         opacity: 0; /* Start fully transparent */
     }
 
     .menu.active {
-        visibility: visible; /* Make visible */
         display: flex;
         transform: translateY(0); /* Slides the menu down when active */
         opacity: 1; /* Fade in to full opacity */
