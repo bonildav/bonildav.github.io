@@ -121,25 +121,28 @@ a:hover {
 
 @media (max-width: 768px) {
     .menu {
-        position: fixed;
+        position: fixed; /* Fixed position to cover the whole screen */
         top: 0;
         left: 0;
-        width: 100vw; /* 100% of the viewport width */
-        height: 100vh; /* 100% of the viewport height */
-        background-color: #cad2c5;
+        right: 0; /* Ensures it stretches to the right edge */
+        bottom: 0; /* Ensures it stretches to the bottom edge */
+        background-color: #cad2c5; /* Background color */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
         display: flex;
         flex-direction: column;
         justify-content: center; /* Center items vertically */
         align-items: center; /* Center items horizontally */
-        transform: translateY(-100%);
+        transform: translateY(-100%); /* Start off-screen */
         opacity: 0;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease;
-        z-index: 1000;
+        z-index: 1000; /* Ensure it's above other content */
     }
 
     .menu.active {
         visibility: visible; /* Make visible */
-        max-height: 500px; /* Enough height to show all items */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
         padding: 10px 10px; /* Add vertical padding */
         transform: translateY(0); /* Slide down into view */
         opacity: 1; /* Fade in to full opacity */
@@ -156,7 +159,7 @@ a:hover {
 
     /* Display hamburger icon on mobile */
     .hamburger {
-        display: block; /* Ensure hamburger is always visible to toggle menu */
+        display: flex;
     }
 }
 
