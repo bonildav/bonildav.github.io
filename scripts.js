@@ -18,14 +18,12 @@ menuLinks.forEach(link => {
         e.preventDefault();
         const targetId = link.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-
+        body.classList.remove('no-scroll'); // Enable scrolling again
         // Smooth scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
-
         // Close the menu after clicking
         menu.classList.remove('active');
         hamburger.classList.remove('active'); // Remove cross effect
-        body.classList.remove('no-scroll'); // Enable scrolling again
         hamburger.setAttribute('aria-expanded', 'false');
     });
 });
