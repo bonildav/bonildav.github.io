@@ -125,15 +125,18 @@ a:hover {
         max-height: 0; /* Collapse the menu */
         overflow: hidden;
         flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust based on your header's height */
+        position: fixed;
+        top: 0; /* Adjust based on your header's height */
         left: 0;
         background-color: #cad2c5;
         width: 100%;
-        padding: 0 10px; /* Remove vertical padding */
+        height: 100%; /* Full height */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
         transition: all 0.3s ease-in-out; /* Transition for all properties */
         transform: translateY(-10px); /* Start slightly above to create a slide effect */
         opacity: 0; /* Start fully transparent */
+        z-index: 1000; /* Ensure it's above other content */
     }
 
     .menu.active {
