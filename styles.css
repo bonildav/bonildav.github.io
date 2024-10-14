@@ -102,8 +102,44 @@ a:hover {
     transform: rotate(-45deg) translate(10px, -10px);
 }
 
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #cad2c5; /* Background color for the full-screen menu */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    }
 
-/* Mobile Menu */
+    .menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0); /* Slide in from the top */
+    }
+
+    .menu__item {
+        margin: 20px 0;
+        text-align: center;
+        font-size: 1.5rem; /* Larger font size for mobile menu */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+
+/* Mobile Menu
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -133,7 +169,7 @@ a:hover {
         margin-left: auto;
     }
 }
-
+*/
 /* Section Headings */
 h2 {
     font-size: 2rem;

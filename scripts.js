@@ -2,7 +2,7 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
 
-
+/*
 // Toggle the menu when hamburger is clicked
 hamburger.addEventListener('click', function() {
     const expanded = this.getAttribute('aria-expanded') === 'true';
@@ -10,6 +10,27 @@ hamburger.addEventListener('click', function() {
     this.classList.toggle('active'); // Toggle cross effect on hamburger
     this.setAttribute('aria-expanded', !expanded);
 });
+*/
+
+// Toggle the full-screen menu when hamburger is clicked
+hamburger.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    menu.classList.toggle('active');
+    this.setAttribute('aria-expanded', !expanded);
+
+    // Lock scrolling when the menu is open
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+});
+
+// Close the menu when any link is clicked
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+});
+
 
 // Close the menu and scroll smoothly to the section when any link is clicked
 menuLinks.forEach(link => {
