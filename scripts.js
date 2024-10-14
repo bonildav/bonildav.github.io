@@ -28,7 +28,6 @@ menuLinks.forEach(link => {
     });
 });
 
-
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
 const dotsNav = document.querySelector('.carousel__nav');
@@ -41,9 +40,10 @@ const setSlidePosition = (slide, index) => {
 };
 slides.forEach(setSlidePosition);
 
-/* Move to target slide */
+/* Move to the target slide */
 const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = `translateX(-${targetSlide.style.left})`;
+    const amountToMove = targetSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 };
@@ -55,14 +55,14 @@ const updateDots = (currentDot, targetDot) => {
 };
 
 /* Handle dot navigation */
-dotsNav.addEventListener('click', e => {
+dotsNav.addEventListener('click', (e) => {
     const targetDot = e.target.closest('button');
 
     if (!targetDot) return;
 
     const currentSlide = track.querySelector('.current-slide');
     const currentDot = dotsNav.querySelector('.current-slide');
-    const targetIndex = dots.findIndex(dot => dot === targetDot);
+    const targetIndex = dots.findIndex((dot) => dot === targetDot);
     const targetSlide = slides[targetIndex];
 
     moveToSlide(track, currentSlide, targetSlide);
