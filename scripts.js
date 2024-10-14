@@ -2,8 +2,6 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
 const body = document.body;
-const menuLinks = document.querySelectorAll('.menu__link'); // Get all menu links
-
 
 // Toggle the menu when hamburger is clicked
 hamburger.addEventListener('click', function() {
