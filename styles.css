@@ -192,6 +192,7 @@ h2 {
 .carousel__track-container {
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .carousel__track {
@@ -200,14 +201,15 @@ h2 {
     will-change: transform;
 }
 
+/* Ensure each slide is set to a percentage width */
 .carousel__slide {
-    min-width: 100%; /* Ensure each slide takes up full width */
+    min-width: 33.33%; /* Show 3 slides on desktop */
     text-align: center;
     flex-shrink: 0;
 }
 
 .carousel__image {
-    width: 100px; /* Adjust size for images */
+    width: 100px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -217,30 +219,38 @@ h2 {
     font-weight: 300;
 }
 
-/* Carousel Buttons */
-.carousel__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #52796f;
+/* Pagination Dots */
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #cad2c5;
     border: none;
-    color: #fff;
     cursor: pointer;
-    padding: 10px;
-    z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
-.carousel__button--left {
-    left: 10px;
+.carousel__indicator.current-slide {
+    background-color: #52796f;
 }
 
-.carousel__button--right {
-    right: 10px;
-}
-
-.carousel__button:hover {
+.carousel__indicator:hover {
     background-color: #354f52;
 }
+
+/* Make carousel responsive */
+@media (max-width: 768px) {
+    .carousel__slide {
+        min-width: 100%; /* Show 1 slide at a time on mobile */
+    }
+}
+
 
 /* Make carousel responsive */
 @media (max-width: 768px) {
