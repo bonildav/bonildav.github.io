@@ -102,6 +102,7 @@ a:hover {
     transform: rotate(-45deg) translate(10px, -10px);
 }
 
+/*
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -127,6 +128,41 @@ a:hover {
 
     .header__logo {
         margin-left: auto;
+    }
+}
+*/
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #cad2c5;
+        width: 100%;
+        padding: 10px 0;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%); /* Menu hidden by default */
+    }
+
+    .menu.active {
+        display: flex;
+        transform: translateY(0); /* Slides the menu down when active */
+    }
+
+    .menu__item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .header__logo {
+        margin-left: auto;
+    }
+
+    /* Display hamburger icon on mobile */
+    .hamburger {
+        display: flex;
     }
 }
 
