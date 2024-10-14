@@ -1,7 +1,7 @@
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
-const body = document.body; // Get the body element
+const body = document.body;
 
 // Toggle the menu when hamburger is clicked
 hamburger.addEventListener('click', function() {
@@ -9,6 +9,7 @@ hamburger.addEventListener('click', function() {
     menu.classList.toggle('active');
     this.classList.toggle('active'); // Toggle cross effect on hamburger
     this.setAttribute('aria-expanded', !expanded);
+    body.classList.toggle('no-scroll'); // Optionally prevent scrolling on the bod
 });
 
 // Close the menu and scroll smoothly to the section when any link is clicked
