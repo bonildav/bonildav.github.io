@@ -2,6 +2,7 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
 const body = document.body;
+const menu = document.querySelector('.menu');
 
 // Get the header element
 const header = document.querySelector('.header');
@@ -10,8 +11,10 @@ const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         header.classList.add('solid-header');
+        menu.classList.add('scrolled-menu');
     } else {
         header.classList.remove('solid-header');
+        menu.classList.remove('scrolled-menu');
     }
 });
 

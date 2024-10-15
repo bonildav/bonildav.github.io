@@ -44,6 +44,11 @@ a:hover {
     transition: background-color 0.3s ease;
 }
 
+.menu.scrolled-menu .menu__link {
+    color: #ffffff; /* White color for menu links when scrolled */
+    transition: color 0.3s ease; /* Smooth transition for the color change */
+}
+
 .menu {
     list-style: none;
     display: flex;
