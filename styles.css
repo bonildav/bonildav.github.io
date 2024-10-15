@@ -65,6 +65,11 @@ a:hover {
     overflow: hidden; /* Ensures the line animation is contained within the link area */
 }
 
+.header.scrolled {
+    background-color: #52796f; /* Darker solid color when scrolling */
+    transition: background-color 0.3s ease;
+}
+
 .menu__link::after {
     content: '';
     position: absolute;

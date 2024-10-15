@@ -3,6 +3,19 @@ const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
 const body = document.body;
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".header");
+
+    // Function to check scroll position
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {  // Adjust the scroll position threshold if needed
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+}
 // Toggle the menu when hamburger is clicked
 hamburger.addEventListener('click', function() {
     const expanded = this.getAttribute('aria-expanded') === 'true';
