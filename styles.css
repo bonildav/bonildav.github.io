@@ -30,11 +30,11 @@ a:hover {
     padding: 1rem;
     position: fixed;
     width: 100%;
+    justify-content: flex-end;
     top: 0;
     left: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 60px;
 }
@@ -43,7 +43,8 @@ a:hover {
     list-style: none;
     display: flex;
     gap: 15px;
-    margin-left: auto;
+    margin: 0; /* Ensure there's no default margin */
+    padding: 0; /* Ensure there's no default padding */
 }
 
 .menu__item {
