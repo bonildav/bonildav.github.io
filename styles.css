@@ -87,6 +87,10 @@ a:hover {
     padding: 10px 15px;
 }
 
+body .header {
+    background-color: transparent;
+}
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
