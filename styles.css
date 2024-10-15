@@ -169,10 +169,6 @@ a:hover {
         text-align: center;
     }
 
-    .header__logo {
-        margin-left: auto;
-    }
-
     /* Display hamburger icon on mobile */
     .hamburger {
         display: flex;
