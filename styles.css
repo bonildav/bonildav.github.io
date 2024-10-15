@@ -76,6 +76,17 @@ a:hover {
     width: 100%; /* Full width on hover */
 }
 
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px 15px;
+}
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
