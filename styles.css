@@ -16,7 +16,7 @@ body {
 /* Links */
 a {
     text-decoration: none;
-    color: #52796f; /* Dark green for links */
+    color: #333; /* Dark green for links */
     transition: color 0.3s ease;
 }
 
