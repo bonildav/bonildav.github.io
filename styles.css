@@ -26,14 +26,16 @@ a:hover {
 
 /* Header */
 .header {
+    background-color: transparent;
+    padding: 1rem;
+    width: 100%;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: transparent; /* Set background to fully transparent */
-    width: 100%; /* Ensure the header spans the full width */
     position: relative; /* Adjust based on your layout needs */
-    z-index: 1000; /* Ensures the header is above other content */
 }
 
 
