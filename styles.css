@@ -39,15 +39,6 @@ a:hover {
     height: 60px;
 }
 
-.header.solid-header {
-    background-color: #52796f; /* Darker solid color when scrolling */
-    transition: background-color 0.3s ease;
-}
-
-.menu.scrolled-menu .menu__link {
-    color: #ffffff; /* White color for menu links when scrolled */
-    transition: color 0.3s ease; /* Smooth transition for the color change */
-}
 
 .menu {
     list-style: none;

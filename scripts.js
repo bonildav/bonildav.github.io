@@ -3,19 +3,6 @@ const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
 const body = document.body;
 
-// Get the header element
-const header = document.querySelector('.header');
-
-// Function to add 'solid-header' class when scrolling down
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('solid-header');
-        menu.classList.add('scrolled-menu');
-    } else {
-        header.classList.remove('solid-header');
-        menu.classList.remove('scrolled-menu');
-    }
-});
 
 // Toggle the menu when hamburger is clicked
 hamburger.addEventListener('click', function() {
