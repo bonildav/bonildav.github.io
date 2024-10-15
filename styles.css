@@ -7,7 +7,6 @@
 }
 
 body {
-    background-color: #cad2c5; /* Light gray-green for a soft backdrop */
     color: #333;
     scroll-behavior: smooth;
     font-weight: 300;
@@ -74,11 +73,6 @@ a:hover {
 
 .menu__link:hover::after {
     width: 100%; /* Full width on hover */
-}
-
-
-body .header {
-    background-color: transparent;
 }
 
 @keyframes fadeInUp {
