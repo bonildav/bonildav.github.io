@@ -28,7 +28,6 @@ a:hover {
 .header {
     background-color: transparent;
     padding: 1rem;
-    position: fixed;
     width: 100%;
     justify-content: flex-end;
     top: 0;
@@ -42,7 +41,6 @@ a:hover {
 
 .menu {
     list-style: none;
-    display: flex;
     gap: 15px;
     margin: 0; /* Ensure there's no default margin */
     padding: 0; /* Ensure there's no default padding */
