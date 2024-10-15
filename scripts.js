@@ -2,28 +2,19 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
 const body = document.body;
-const throttleDuration = 100; // milliseconds
 
-let isThrottled = false;
-function handleScroll() {
-    if (!isThrottled) {
-        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+// Get the header element
+const header = document.querySelector('.header');
 
-        if (scrollPosition > 50) {
-            header.classList.add('solid-header');
-        } else {
-            header.classList.remove('solid-header');
-        }
-
-        isThrottled = true;
-
-        setTimeout(() => {
-            isThrottled = false;
-        }, throttleDuration);
+// Function to add 'solid-header' class when scrolling down
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('solid-header');
+    } else {
+        header.classList.remove('solid-header');
     }
-}
+});
 
-window.addEventListener('scroll', handleScroll);
 // Toggle the menu when hamburger is clicked
 hamburger.addEventListener('click', function() {
     const expanded = this.getAttribute('aria-expanded') === 'true';
