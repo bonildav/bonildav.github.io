@@ -2,20 +2,27 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
 const body = document.body;
+const throttleDuration = 100; // milliseconds
 
+function handleScroll() {
+    if (!isThrottled) {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector(".header");
-
-    // Function to check scroll position
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {  // Adjust the scroll position threshold if needed
-            header.classList.add("scrolled");
+        if (scrollPosition > 50) {
+            header.classList.add('solid-header');
         } else {
-            header.classList.remove("scrolled");
+            header.classList.remove('solid-header');
         }
-    });
+
+        isThrottled = true;
+
+        setTimeout(() => {
+            isThrottled = false;
+        }, throttleDuration);
+    }
 }
+
+window.addEventListener('scroll', handleScroll);
 // Toggle the menu when hamburger is clicked
 hamburger.addEventListener('click', function() {
     const expanded = this.getAttribute('aria-expanded') === 'true';
