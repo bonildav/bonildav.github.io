@@ -44,8 +44,6 @@ a:hover {
     list-style: none;
     display: flex;
     gap: 15px;
-    margin: 0; /* Ensure there's no default margin */
-    padding: 0; /* Ensure there's no default padding */
 }
 
 .menu__item {
