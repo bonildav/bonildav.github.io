@@ -4,6 +4,7 @@ const menuLinks = document.querySelectorAll('.menu__link');
 const body = document.body;
 const throttleDuration = 100; // milliseconds
 
+let isThrottled = false;
 function handleScroll() {
     if (!isThrottled) {
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
