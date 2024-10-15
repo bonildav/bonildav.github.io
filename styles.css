@@ -39,6 +39,11 @@ a:hover {
     height: 60px;
 }
 
+.header.solid-header {
+    background-color: #52796f; /* Darker solid color when scrolling */
+    transition: background-color 0.3s ease;
+}
+
 .menu {
     list-style: none;
     display: flex;
