@@ -39,7 +39,6 @@ a:hover {
     height: 60px;
 }
 
-
 .menu {
     list-style: none;
     display: flex;
@@ -59,11 +58,6 @@ a:hover {
     position: relative; /* Positioning context for pseudo-elements */
     padding: 10px 15px; /* Adjust padding as needed */
     overflow: hidden; /* Ensures the line animation is contained within the link area */
-}
-
-.header.solid-header {
-    background-color: #52796f; /* Choose the color you want for the solid header */
-    transition: background-color 0.3s ease; /* Smooth transition for the color change */
 }
 
 .menu__link::after {
@@ -173,6 +167,10 @@ a:hover {
     .menu__item {
         margin: 10px 0;
         text-align: center;
+    }
+
+    .header__logo {
+        margin-left: auto;
     }
 
     /* Display hamburger icon on mobile */
