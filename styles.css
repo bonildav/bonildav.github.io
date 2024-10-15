@@ -39,10 +39,6 @@ a:hover {
     height: 60px;
 }
 
-.header__logo img {
-    height: 40px;
-    width: auto;
-}
 
 .menu {
     list-style: none;
@@ -177,10 +173,6 @@ a:hover {
     .menu__item {
         margin: 10px 0;
         text-align: center;
-    }
-
-    .header__logo {
-        margin-left: auto;
     }
 
     /* Display hamburger icon on mobile */
