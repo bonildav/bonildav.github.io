@@ -2,7 +2,6 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu__link');
 const body = document.body;
-const menu = document.querySelector('.menu');
 
 // Get the header element
 const header = document.querySelector('.header');
